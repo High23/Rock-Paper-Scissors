@@ -26,9 +26,14 @@
                     return (`You Tied! ${playerSelection.replace(playerSelection[0], playerSelection[0].toUpperCase())} doesn't beat ${computerSelection}`)
                 }
             }
-            let playerSelection = prompt("Choose between rock, paper, or scissors.").toLowerCase();
-            let computerSelection = getComputerChoice();
-            console.log(playRound(playerSelection, computerSelection));
+            function game() {
+                for (let i = 0; i < 5; i++) {
+                    let playerSelection = prompt("Choose between rock, paper, or scissors.").toLowerCase();
+                    let computerSelection = getComputerChoice();
+                    console.log(playRound(playerSelection, computerSelection));
+                }
+            }
+            game();
         </script>
     </head>
     <body>
