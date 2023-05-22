@@ -1,4 +1,4 @@
 # Rock-Paper-Scissors
 ## Description
-This is a webpage that lets users play rock, paper, or scissors against a computer. For now, users will have to look into the 
-browser's console to see the results.
+This is a webpage that lets users pick rock, paper, or scissors and play against a computer. When a player or the computer win 5 rounds, the scoreboard resets
+back to zero and the winner is announced.
