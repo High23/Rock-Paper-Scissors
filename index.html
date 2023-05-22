@@ -4,39 +4,17 @@
     <header>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
-        <script>
-            function getComputerChoice() {
-                let choices = ["Rock", "Paper", "Scissors"]
-                return choices[Math.floor(Math.random() * 3)];
-            }
-            function playRound(playerSelection, computerSelection) {
-                if (playerSelection === 'rock' && computerSelection === 'Scissors'){
-                    return("You Win! Rock Beats Scissors");
-                } else if (playerSelection === 'paper' && computerSelection === 'Rock'){
-                    return ("You Win! Paper Beats Rock");
-                } else if (playerSelection === 'scissors' && computerSelection === 'Paper'){
-                    return ("You Win! Scissors Beats Paper");
-                } else if(playerSelection === 'rock' && computerSelection === 'Paper'){
-                    return("You Lose! Paper Beats Rock");
-                } else if (playerSelection === 'paper' && computerSelection === 'Scissors'){
-                    return ("You Lose! Scissors Beats Paper");
-                } else if (playerSelection === 'scissors' && computerSelection === 'Rock'){
-                    return ("You Lose! Rock Beats Scissors");
-                } else {
-                    return (`You Tied! ${playerSelection.replace(playerSelection[0], playerSelection[0].toUpperCase())} doesn't beat ${computerSelection}`)
-                }
-            }
-            function game() {
-                for (let i = 0; i < 5; i++) {
-                    let playerSelection = prompt("Choose between rock, paper, or scissors.").toLowerCase();
-                    let computerSelection = getComputerChoice();
-                    console.log(playRound(playerSelection, computerSelection));
-                }
-            }
-            game();
-        </script>
+        <script src="rps.js" defer></script>
     </head>
     <body>
-
+        <h2>Rock, Paper, or Scissors?</h2>
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissors">Scissors</button>
+        <div style="margin-top: 10px;">
+            <div id="scoreboard"></div>
+            <div id="results"></div>
+        </div>
+        
     </body>
 </html>
